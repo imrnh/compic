@@ -11,7 +11,7 @@
 identifiers "variable_"[a-zA-Z]([a-zA-Z0-9])*
 unary_operator "inc"|"dec"
 single_line_comment [/][/].*
-multiple_line_comment [ ]*[/]"cmnt"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"cmnt"[/]
+multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm"[/]
 
 /*RE and Action*/
 

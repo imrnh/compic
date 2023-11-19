@@ -52,9 +52,9 @@ sop
 	incident lpr 4 rpr sop check 1 : 4 addition 2 # check 2 : 3 addition 2 # nop : 3 exponential 2 # scp     
 
 	//we try to skip this   
-	/cmnt/Bangladesh is a beautiful
+	/mcm/Bangladesh is a beautiful
 	country
-	/cmnt/                                   
+	/mcm/                                   
 	
 
 	

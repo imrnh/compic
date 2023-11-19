@@ -150,7 +150,7 @@ statement: SM
 
 						}
 	;
-///////////////////////
+
 	
 			BASE : Bas   
 				 | Bas Dflt 
@@ -176,7 +176,7 @@ statement: SM
 						track=0;
 					}
 				 ;    
-	/////////////////////////////
+	
 	
 	
 expression: NUM				{ $$ = $1; 	}
@@ -210,7 +210,7 @@ expression: NUM				{ $$ = $1; 	}
 
 	
 	;
-	///////////////////////////////////////
+	
 	switch_expression: NUM				{ $$ = $1; val = $$;	}
 
 	| switch_expression PLUS switch_expression	{ $$ = $1 + $3; val = $$; }
@@ -234,7 +234,9 @@ expression: NUM				{ $$ = $1; 	}
 	
 	;
 %%
-//////////////////////////
+
+
+
 void ins(store *p, char *s, int n)
 {
   p->str = s;
@@ -252,10 +254,7 @@ int look_for_key(char *key)
     }
     return 0;
 }
-/////////////////////////
 
-
-///////////////////////////
 
 
 int yywrap()
