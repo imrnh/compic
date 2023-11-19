@@ -1,4 +1,4 @@
-function main fop fcp
+function main lpr rpr
 sop
 	
 	in  variable_a $  variable_b $ variable_c $ variable_b #
@@ -7,18 +7,18 @@ sop
 	1 addition 12 division 4 multiplication 4 #
 	50 subtraction 15 addition 8 division 2 multiplication 5 #
 	3 division 0 #
-	iff fop 5 addition 3 subtraction 8 fcp
+	iff lpr 5 addition 3 subtraction 8 rpr
 		sop
 			12 addition 2 #
 		scp
 		
-	iff fop 5 addition 8 fcp
+	iff lpr 5 addition 8 rpr
 		sop
 			2 exponential 2 #
 
 		scp
 
-	iff fop 7 lrt 5 fcp
+	iff lpr 7 lrt 5 rpr
 		sop
 		
 			7 addition 6 multiplication 2 #
@@ -27,9 +27,9 @@ sop
 		sop
 			6 addition 8 division 4 #
 		scp
-	iff fop 7 grt 5 fcp
+	iff lpr 7 grt 5 rpr
 		sop
-			iff fop 7 lrt 5 fcp
+			iff lpr 7 lrt 5 rpr
 			sop
 				7 addition 7 addition 6 #
 			scp
@@ -43,13 +43,13 @@ sop
 			6 multiplication 3 subtraction 1 #
 		scp
 		
-	flp fop 2 : 6 fcp sop 4 addition 2 scp
+	flp lpr 2 : 6 rpr sop 4 addition 2 scp
 
-	wlp fop 0 lrt 5 fcp sop 4 addition 2 scp
+	wlp lpr 0 lrt 5 rpr sop 4 addition 2 scp
 
-	wlp fop 6 grt 1 fcp sop 6 multiplication 3 scp
+	wlp lpr 6 grt 1 rpr sop 6 multiplication 3 scp
 
-	incident fop 4 fcp sop check 1 : 4 addition 2 # check 2 : 3 addition 2 # nop : 3 exponential 2 # scp     
+	incident lpr 4 rpr sop check 1 : 4 addition 2 # check 2 : 3 addition 2 # nop : 3 exponential 2 # scp     
 
 	//we try to skip this   
 	/cmnt/Bangladesh is a beautiful

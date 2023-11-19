@@ -43,8 +43,8 @@ multiple_line_comment [ ]*[/]"cmnt"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"cm
 		return NUM;
 	}
 "flp"   { return FOR;}	
-"fop"	{ return LP; }
-"fcp"	{ return RP; }
+"lpr"	{ return LP; }
+"rpr"	{ return RP; }
 "$"	{ return CM; }
 "#"	{ return SM; }
 "addition"	{ return PLUS;}
