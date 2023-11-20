@@ -27,8 +27,8 @@ multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm
 }
 
 {unary_operator}   {return inc;}
-"sop"	 { return LB; }
-"scp"	  { return RB; }
+"sob"	 { return LB; }
+"eob"	  { return RB; }
 "brk"    {   return BREAK;     }
 "check"      { return CASE;      }
 "incident"      { return SWITCH;	}
@@ -47,11 +47,11 @@ multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm
 "rpr"	{ return RP; }
 "$"	{ return CM; }
 "#"	{ return SM; }
-"addition"	{ return PLUS;}
-"subtraction"	{ return MINUS; }
-"multiplication"	{ return MULT; }
-"division"	{ return DIV; }
-"exponential"	{ return POW; }
+"plus"	{ return PLUS;}
+"minus"	{ return MINUS; }
+"mul"	{ return MULT; }
+"div"	{ return DIV; }
+"pow"	{ return POW; }
 [@]		{ return ASSIGN;  }
 "grt"	{ return GT; }
 "lrt"	{ return LT; }

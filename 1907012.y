@@ -21,7 +21,7 @@
 
 %token<number> NUM
 %token<string> VAR 
-%token<string> IF ELIF ELSE MAIN INT FLOAT DOUBLE CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV POW ASSIGN FOR COL WHILE BREAK DEFAULT CASE SWITCH inc
+%token<string> IF ELIF ELSE MAIN INT FLOAT DOUBLE CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK DEFAULT CASE SWITCH inc
 %type <string> statement
 %type <number> expression
 %type <number> switch_expression
@@ -30,7 +30,6 @@
 %left LT GT
 %left PLUS MINUS
 %left MULT DIV
-%left POW
 
 /* Simple grammar rules */
 
@@ -197,7 +196,6 @@ expression: NUM				{ $$ = $1; 	}
 							printf("\ndivision by zero\t");
 				  		} 	
 				    	}
-	| expression POW expression { $$ = pow($1,$3); }
 
 
 	| expression LT expression	{ $$ = $1 < $3; }
@@ -229,7 +227,6 @@ expression: NUM				{ $$ = $1; 	}
 							 val = $$;
 				  		} 	
 				    	}
-	| switch_expression POW switch_expression { $$ = pow($1,$3);  val = $$;}
 
 	
 	;

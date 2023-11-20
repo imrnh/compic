@@ -69,18 +69,17 @@ extern int yydebug;
     MINUS = 275,
     MULT = 276,
     DIV = 277,
-    POW = 278,
-    ASSIGN = 279,
-    FOR = 280,
-    COL = 281,
-    WHILE = 282,
-    BREAK = 283,
-    DEFAULT = 284,
-    CASE = 285,
-    SWITCH = 286,
-    inc = 287,
-    LT = 288,
-    GT = 289
+    ASSIGN = 278,
+    FOR = 279,
+    COL = 280,
+    WHILE = 281,
+    BREAK = 282,
+    DEFAULT = 283,
+    CASE = 284,
+    SWITCH = 285,
+    inc = 286,
+    LT = 287,
+    GT = 288
   };
 #endif
 
@@ -93,7 +92,7 @@ union YYSTYPE
         int number;
         char *string;
 
-#line 97 "1907012.tab.h"
+#line 96 "1907012.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

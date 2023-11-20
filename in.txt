@@ -1,61 +1,61 @@
 function main lpr rpr
-sop
+sob
 	
 	in  variable_a $  variable_b $ variable_c $ variable_b #
 	
 	inc 8 inc #
-	1 addition 12 division 4 multiplication 4 #
-	50 subtraction 15 addition 8 division 2 multiplication 5 #
-	3 division 0 #
-	iff lpr 5 addition 3 subtraction 8 rpr
-		sop
-			12 addition 2 #
-		scp
+	1 plus 12 div 4 mul 4 #
+	50 minus 15 plus 8 div 2 mul 5 #
+	3 div 0 #
+	iff lpr 5 plus 3 minus 8 rpr
+		sob
+			12 plus 2 #
+		eob
 		
-	iff lpr 5 addition 8 rpr
-		sop
-			2 exponential 2 #
+	iff lpr 5 plus 8 rpr
+		sob
+			2 pow 2 #
 
-		scp
+		eob
 
 	iff lpr 7 lrt 5 rpr
-		sop
+		sob
 		
-			7 addition 6 multiplication 2 #
-		scp
+			7 plus 6 mul 2 #
+		eob
 	or
-		sop
-			6 addition 8 division 4 #
-		scp
+		sob
+			6 plus 8 div 4 #
+		eob
 	iff lpr 7 grt 5 rpr
-		sop
+		sob
 			iff lpr 7 lrt 5 rpr
-			sop
-				7 addition 7 addition 6 #
-			scp
+			sob
+				7 plus 7 plus 6 #
+			eob
 			or
-			sop
-				3 addition 8 division 4 #
-			scp
-		scp
+			sob
+				3 plus 8 div 4 #
+			eob
+		eob
 	or
-		sop
-			6 multiplication 3 subtraction 1 #
-		scp
+		sob
+			6 mul 3 minus 1 #
+		eob
 		
-	flp lpr 2 : 6 rpr sop 4 addition 2 scp
+	flp lpr 2 : 6 rpr sob 4 plus 2 eob
 
-	wlp lpr 0 lrt 5 rpr sop 4 addition 2 scp
+	wlp lpr 0 lrt 5 rpr sob 4 plus 2 eob
 
-	wlp lpr 6 grt 1 rpr sop 6 multiplication 3 scp
+	wlp lpr 6 grt 1 rpr sob 6 mul 3 eob
 
-	incident lpr 4 rpr sop check 1 : 4 addition 2 # check 2 : 3 addition 2 # nop : 3 exponential 2 # scp     
+	incident lpr 4 rpr sob check 1 : 4 plus 2 # check 2 : 3 plus 2 # nop : 3 pow 2 # eob     
 
-	//we try to skip this   
-	/mcm/Bangladesh is a beautiful
-	country
+	//this is a single line comment
+	/mcm/This is a multi line comment
+	This is 2nd line of the comment.
 	/mcm/                                   
 	
 
 	
-scp
+eob
