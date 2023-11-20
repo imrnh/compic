@@ -1,3 +1,4 @@
+clear
 rm 1907012.tab.c
 rm 1907012.tab.h
 rm lex.yy.c
@@ -9,6 +10,6 @@ sudo gcc lex.yy.c 1907012.tab.c -o c.out
 rm c.out
 
 
-rm 1907012.tab.c
-rm 1907012.tab.h
-rm lex.yy.c
+# rm 1907012.tab.c
+# rm 1907012.tab.h
+# rm lex.yy.c

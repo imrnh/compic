@@ -1,24 +1,59 @@
-variable_b is already declared
 
 valid declaration
 inc: 9
 
-value of expression: 9
+expr: 9
 
-value of expression: 13
-
-value of expression: 55
+expr: 13
 
 division by zero	
-value of expression: 0
+expr: 0
 
-value of expression: 14
+expr: 18
 
-condition value zero in IF block
-Unknown Character.
+expr: 14
+If block not statement is false
 
-Unknown Character.
+expr: 8
 
-Unknown Character.
+Inside if with stmt: 8
 
-syntax error
+expr: 19
+
+expr: 8
+
+Inside else. Value: 8
+
+expr: 20
+
+expr: 5
+
+Inside else. Value: 5
+
+expr: 17
+
+Insie if: 5
+
+For loop
+Step : 2 with expr : 6
+Step : 3 with expr : 6
+Step : 4 with expr : 6
+Step : 5 with expr : 6
+While LOOP:
+step: 0 value of expression :6 
+step: 1 value of expression :6 
+step: 2 value of expression :6 
+step: 3 value of expression :6 
+step: 4 value of expression :6 
+
+While LOOP:
+step: 0 value of expression :18 
+step: 1 value of expression :18 
+step: 2 value of expression :18 
+step: 3 value of expression :18 
+step: 4 value of expression :18 
+
+single line comment
+multiple_line_comment
+
+Successful compilation

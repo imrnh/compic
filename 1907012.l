@@ -8,7 +8,7 @@
 
 %}
 
-identifiers "$_"[a-zA-Z]([a-zA-Z0-9])*
+identifiers "var_"[a-zA-Z]([a-zA-Z0-9])*
 unary_operator "inc"|"dec"
 single_line_comment [/][/].*
 multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm"[/]
@@ -23,7 +23,7 @@ multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm
 
 }
 {multiple_line_comment} {
-	printf("multiple_line_comment");
+	printf("multiple_line_comment\n");
 }
 
 {unary_operator}   {return inc;}

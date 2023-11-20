@@ -2,7 +2,7 @@
 	#include<stdio.h>
 	#include <math.h>
 	int cnt=1,cntt=0,val,track=0;
-	typedef struct entry {
+	typedef struct datatype_struct {
     	char *str;
     	int n;
 	}store;
@@ -55,7 +55,7 @@ TYPE : INT
      ;
 
 ID1  : ID1 CM VAR	{
-						if(look_for_key($3))
+						if(not_already_defined($3))
 						{
 							printf("%s is already declared\n", $3 );
 						}
@@ -68,7 +68,7 @@ ID1  : ID1 CM VAR	{
 			}
 
      |VAR	{
-				if(look_for_key($1))
+				if(not_already_defined($1))
 				{
 					printf("%s is already declared\n", $1 );
 				}
@@ -84,39 +84,40 @@ ID1  : ID1 CM VAR	{
 statement: SM
 	| SWITCH LP switch_expression RP LB BASE RB    {printf("SWITCH case.\n");val=$3;} 
 
-	| expression SM 			{ printf("\nvalue of expression: %d\n", ($1)); }
+	| expression SM 			{ printf("\nexpr: %d\n", ($1)); }
 
        
 
 	| IF LP expression RP LB statement RB {
 								if($3)
 								{
-									printf("\nWe are  in IF and the value is: %d\n",($6));
+									printf("\nInside if with stmt: %d\n",($6));
 								}
 								else
 								{
-									printf("\ncondition value zero in IF block\n");
+									printf("\If block not statement is false\n");
 								}
 							}
 
 	| IF LP expression RP LB statement RB ELSE LB statement RB {
-								 	if($3)
+									if($3)
 									{
-										printf("\nWe are in IF: %d\n",$6);
+										printf("\nInsie if: %d\n",($6));
 									}
 									else
 									{
-										printf("\nWe are in ELSE and the value is : %d\n",$10);
+										printf("\nInside else. Value: %d\n",($10));
 									}
-								   }													   
-	| FOR LP NUM COL NUM RP LB expression RB     {
-	   printf("For Loop :\n");
-	   int i;
-	   for(i=$3;i<$5;i++){
-	   printf("Step : %d and value of expression : %d\n",i,$8);
-	   }
+
+							}													   
+	| FOR LP NUM COL NUM RP LB expression RB {
+		printf("\nFor loop\n");
+		int i;
+		for(i=$3;i<$5;i++){
+		printf("Step : %d with expr : %d\n",i,$8);
+		}
 	}
-	/*while loop starts*/
+
 
 	| WHILE LP NUM LT NUM RP LB expression RB   {
 								int i = $5,j=0;
@@ -240,7 +241,7 @@ void ins(store *p, char *s, int n)
   p->n = n;
 }
 
-int look_for_key(char *key)
+int not_already_defined(char *key)
 {
     int i = 1;
     char *name = st[i].str;
