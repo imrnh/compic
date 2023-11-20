@@ -50,8 +50,8 @@ sob
 
 
 	//this is a single line comment
-	/mcm/This is a multi line comment
+	 /mcm/This is a multi line comment
 	This is 2nd line of the comment.
-	/mcm/                                   
+	 /mcm/                                   
 	
 eob
