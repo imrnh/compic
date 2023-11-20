@@ -51,7 +51,7 @@ multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm
 "minus"	{ return MINUS; }
 "mul"	{ return MULT; }
 "div"	{ return DIV; }
-[@]		{ return ASSIGN;  }
+"asg"		{ return ASSIGN;  }
 "grt"	{ return GT; }
 "lrt"	{ return LT; }
 

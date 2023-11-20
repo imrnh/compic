@@ -1,8 +1,9 @@
 function main lpr rpr
 sob
 	
-	in  var_a $ var_b $ var_c $ var_d #
-	
+	in  var_a $ var_b $ var_c $ var_d $ var_a #
+
+
 	inc 8 inc #
 	1 plus 12 div 4 mul 4 #
 	3 div 0 #

@@ -8,9 +8,15 @@
 	}store;
 	store st[1000],sym[1000];
 	void ins(store *p, char *s, int n);
-	int cnt2=1; 
-	
-	
+	int cnt2=1; 	
+
+
+	char number_variables[100][100];
+	char string_variables[100][100];
+
+	int int_var_values[100];
+	char string_var_values[100][100];
+
 %}
 %union 
 {
@@ -55,7 +61,7 @@ TYPE : INT
      ;
 
 ID1  : ID1 CM VAR	{
-						if(not_already_defined($3))
+						if(already_defined($3))
 						{
 							printf("%s is already declared\n", $3 );
 						}
@@ -68,7 +74,7 @@ ID1  : ID1 CM VAR	{
 			}
 
      |VAR	{
-				if(not_already_defined($1))
+				if(already_defined($1))
 				{
 					printf("%s is already declared\n", $1 );
 				}
@@ -78,6 +84,7 @@ ID1  : ID1 CM VAR	{
 					cnt++;
 				}
 			}
+	| VAR ASSIGN NUM { printf("\n assigning \n"); }
      ;
 
 
@@ -241,7 +248,7 @@ void ins(store *p, char *s, int n)
   p->n = n;
 }
 
-int not_already_defined(char *key)
+int already_defined(char *key)
 {
     int i = 1;
     char *name = st[i].str;
