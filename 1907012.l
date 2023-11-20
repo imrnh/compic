@@ -8,7 +8,7 @@
 
 %}
 
-identifiers "variable_"[a-zA-Z]([a-zA-Z0-9])*
+identifiers "$_"[a-zA-Z]([a-zA-Z0-9])*
 unary_operator "inc"|"dec"
 single_line_comment [/][/].*
 multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm"[/]
@@ -51,7 +51,6 @@ multiple_line_comment [ ]*[/]"mcm"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"mcm
 "minus"	{ return MINUS; }
 "mul"	{ return MULT; }
 "div"	{ return DIV; }
-"pow"	{ return POW; }
 [@]		{ return ASSIGN;  }
 "grt"	{ return GT; }
 "lrt"	{ return LT; }

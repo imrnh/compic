@@ -1,3 +1,11 @@
+function add lpr rpr
+sob
+	
+eob
+
+
+
+
 function main lpr rpr
 sob
 	
