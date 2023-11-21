@@ -6,9 +6,8 @@
     	char *str;
     	int n;
 	}store;
-	store st[1000],sym[1000];
+	store st[1000];
 	void ins(store *p, char *s, int n);
-	int cnt2=1; 	
 
 
 	char number_variables[100][100];
@@ -25,9 +24,8 @@
 }
 /* BISON Declarations */
 
-%token<number> NUM
-%token<string> VAR 
-%token<string> IF ELIF ELSE MAIN INT FLOAT DOUBLE CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK DEFAULT CASE SWITCH inc
+%token<number> NUM 
+%token<string> VAR IF ELIF ELSE MAIN INT FLOAT DOUBLE CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK DEFAULT CASE SWITCH inc
 %type <string> statement
 %type <number> expression
 %type <number> switch_expression
